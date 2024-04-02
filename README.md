@@ -1,2 +1,2 @@
 # mystore
-an employee manager application for e-commerce stores
+an freelancer manager application for e-commerce brands
