@@ -20,6 +20,7 @@
             <th>Last Name</th>
             <th>Age</th>
             <th>Email</th>
+            <th>Rating</th>
             <th>Description</th>
         </tr>
         </thead>
@@ -43,6 +44,7 @@
                 <td><?php echo $row['last_name']; ?></td>
                 <td><?php echo $row['age']; ?></td>
                 <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['rating']; ?></td>
                 <td><?php echo $row['description']; ?></td>
             </tr>
 
@@ -54,8 +56,20 @@
         </tbody>
     </table>
 
-<form>
-<!-- Modal -->
+    <?php
+
+        if(isset($_GET['message'])){
+            echo '<h6 style="text-align:center; color:red">'.$_GET['message']."</h6>";
+        }
+
+        if(isset($_GET['insert_msg'])){
+            echo '<h6 style="text-align:center; color:green">'.$_GET['insert_msg']."</h6>";
+        }
+
+    ?>
+
+    <!-- Modal -->
+<form action="insert_data.php" method="POST">
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -78,6 +92,14 @@
                 <input type="number" name="age" class="form-control">
             </div>
             <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <input type="number" name="rating" class="form-control">
+            </div>
+            <div class="form-group">
                 <label for="description">Description</label>
                 <input type="text" name="description" class="form-control">
             </div>
@@ -85,7 +107,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Add</button>
+        <input type="submit" class="btn btn-success" name="add_review" value="ADD">
       </div>
     </div>
   </div>
