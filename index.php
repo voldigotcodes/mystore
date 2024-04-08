@@ -22,6 +22,8 @@
             <th>Email</th>
             <th>Rating</th>
             <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -46,6 +48,8 @@
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['rating']; ?></td>
                 <td><?php echo $row['description']; ?></td>
+                <td><a href="update_page_1.php?id=<?php echo $row['id']; ?>" class="btn btn-success">Update</a></td>
+                <td><a href="delete_page.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a></td>
             </tr>
 
                         <?php
