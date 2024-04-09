@@ -30,7 +30,7 @@ if(isset($_POST['add_review'])){
     // }
     
     else{
-        $query = "INSERT INTO `employee` (`first_name`, `last_name`, `age`, `email`, `rating`, `description`) VALUES ('$f_name','$l_name','$age','$email','$rating','$descripiton')";
+        $query = "INSERT INTO `reviews` (`first_name`, `last_name`, `age`, `email`, `rating`, `description`) VALUES ('$f_name','$l_name','$age','$email','$rating','$descripiton')";
        // $query = "insert into `employee` (`first_name`, `last_name`, `age`, `email`, `rating`, `description`) values('$f_name', '$l_name', '$age', '$email', '$rating', '$description')";
         $result = mysqli_query($connection, $query);
 

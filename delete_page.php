@@ -5,7 +5,7 @@ include('dbcon.php');
 if(isset($_GET['id'])){
     $id = $_GET['id'];
 
-    $query = "DELETE from `employee` WHERE id=$id";
+    $query = "DELETE from `reviews` WHERE id=$id";
 
     $result = mysqli_query($connection, $query);
     if(!$result){

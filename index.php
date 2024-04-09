@@ -30,7 +30,7 @@
 
             <?php
 
-                $query = "select * from `employee` ";
+                $query = "select * from `reviews` ";
                 $result = mysqli_query($connection, $query);
 
                 if(!$result){

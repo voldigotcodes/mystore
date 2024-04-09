@@ -7,7 +7,7 @@
                 if(isset($_GET['id'])){
                     $id = $_GET['id'];
 
-                $query = "select * from `employee` where id=$id";
+                $query = "select * from `reviews` where id=$id";
                 $result = mysqli_query($connection, $query);
 
                 if(!$result){
@@ -36,7 +36,7 @@ if(isset($_POST['modify_review'])){
     if($f_name=== "" || empty($f_name)){
         header('location:update_page_1.php?message=You need to fill in the first name');
     }else{
-        $query = "UPDATE `employee` SET `first_name` = '$f_name', `last_name` = '$l_name', `age` = '$age', `email` = '$email', `rating` = '$rating', `description` = '$description'
+        $query = "UPDATE `reviews` SET `first_name` = '$f_name', `last_name` = '$l_name', `age` = '$age', `email` = '$email', `rating` = '$rating', `description` = '$description'
         where id = $idnew";
 
         $result = mysqli_query($connection, $query);
