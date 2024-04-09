@@ -1,2 +1,3 @@
 # mystore
-an freelancer manager application for e-commerce brands
+A customer review web plug-in for online stores.
+Allowing them to store, display, modify, create and delete reviews.
