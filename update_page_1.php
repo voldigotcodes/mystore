@@ -44,7 +44,7 @@ if(isset($_POST['modify_review'])){
         if(!$result){
             die("Query failed".mysqli_error($connection));
         }else{
-            header('location:index.php?insert_msg=Your Review was Modified!');
+            header('location:index.php?update_msg=Your Review was Modified!');
         }
     }
 }

@@ -70,6 +70,14 @@
             echo '<h6 style="text-align:center; color:green">'.$_GET['insert_msg']."</h6>";
         }
 
+        if(isset($_GET['update_msg'])){
+            echo '<h6 style="text-align:center; color:red">'.$_GET['update_msg']."</h6>";
+        }
+
+        if(isset($_GET['delete_msg'])){
+            echo '<h6 style="text-align:center; color:red">'.$_GET['delete_msg']."</h6>";
+        }
+
     ?>
 
     <!-- Modal -->
