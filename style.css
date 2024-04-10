@@ -21,3 +21,33 @@ h6{
     text-align: center;
     color: #ff0000;
 }
+.section{
+    display: flex;
+    flex-direction: row;
+
+}
+tbody{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 5%;
+
+}
+
+tr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 5px 5px 5px;
+    border-radius: 25px;
+    background: #beac4e;
+    padding: 5px;
+}
+.upper-td{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.lower-td{
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}

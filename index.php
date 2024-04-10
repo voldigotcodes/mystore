@@ -10,12 +10,12 @@
 </button>
 
 </div>
-
-    <table class="table table-hover table-bordered table-striped">
+<!-- table-striped -->
+    <table class="table table-hover table-bordered ">
         <thead>
 
         <tr>
-            <th>ID</th>
+            <!-- <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Age</th>
@@ -23,7 +23,7 @@
             <th>Rating</th>
             <th>Description</th>
             <th>Update</th>
-            <th>Delete</th>
+            <th>Delete</th> -->
         </tr>
         </thead>
         <tbody>
@@ -36,23 +36,30 @@
                 if(!$result){
                     die("query Failed".mysqli_error($connection));
                 }else{
-
+                    $i = 0;
                     while($row = mysqli_fetch_assoc($result)){
+                        
                         ?>
 
             <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['first_name']; ?></td>
-                <td><?php echo $row['last_name']; ?></td>
-                <td><?php echo $row['age']; ?></td>
+                <td class="upper-td"><?php echo $row['id']; ?></td>
+                <td><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?>, <?php echo $row['age']; ?></td>
                 <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['rating']; ?></td>
+                <td><?php echo $row['rating']; ?>/5 </td>
                 <td><?php echo $row['description']; ?></td>
-                <td><a href="update_page_1.php?id=<?php echo $row['id']; ?>" class="btn btn-success">Update</a></td>
-                <td><a href="delete_page.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a></td>
+                <td class="lower-td"><a href="update_page_1.php?id=<?php echo $row['id']; ?>" class="btn btn-success">Update</a>
+                <a href="delete_page.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a></td>
             </tr>
 
                         <?php
+                        $i++;
+                        if($i >= 4){
+                            $i=0;
+                            ?>
+                            </tbody>
+                            <tbody>
+                            <?php
+                        }
                     }
                 }
 
