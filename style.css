@@ -42,6 +42,8 @@ tr{
     border-radius: 25px;
     background: #beac4e;
     padding: 5px;
+    max-width: 300px;
+    overflow-x: scroll;
 }
 .upper-td{
     border-top-left-radius: 25px;
